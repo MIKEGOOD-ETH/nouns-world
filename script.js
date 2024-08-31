@@ -37,7 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (
             !link.closest(".explore-more") &&
             !link.closest(".nav-link") &&
-            !link.closest(".image-grid")
+            !link.closest(".image-grid") &&
+            !link.closest(".dropdown-content")
         ) {
             // If not, set it to open in a new window
             link.setAttribute("target", "_blank");
@@ -47,4 +48,5 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
 
