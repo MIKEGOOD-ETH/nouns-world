@@ -27,3 +27,10 @@ function toggleMenu() {
     navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll("a");
+
+    links.forEach(link => {
+        link.setAttribute("target", "_blank");
+    });
+});
