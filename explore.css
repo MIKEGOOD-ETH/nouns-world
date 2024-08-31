@@ -53,6 +53,7 @@ nav {
     color: #D8DADF; 
 }
 
+
 .dropdown-menu {
     position: relative;
     display: inline-block;
@@ -93,10 +94,6 @@ nav {
     display: block;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
 
 /* Header Styles */
 header {
@@ -109,7 +106,7 @@ header {
 
 
 header img {
-    max-width: 69%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -333,6 +330,15 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .logo-img {
+        width: 30px;
+    }
+
+
+    .nav-link a {
+        font-size: 0.9rem; 
+    }
+
     .image-grid {
         grid-template-columns: 1fr;
     }
