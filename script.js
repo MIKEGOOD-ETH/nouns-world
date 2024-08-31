@@ -43,10 +43,14 @@ document.addEventListener("DOMContentLoaded", function() {
             // If not, set it to open in a new window
             link.setAttribute("target", "_blank");
         } else {
-            // Otherwise, ensure it opens in the same window/tab
+            // Ensure these open in the same tab
             link.setAttribute("target", "_self");
         }
     });
+
+    // Specifically target links within the dropdown-content
+    const dropdownLinks = document.querySelectorAll(".dropdown-content a");
+    dropdownLinks.forEach(link => {
+        link.setAttribute("target", "_blank");
+    });
 });
-
-
