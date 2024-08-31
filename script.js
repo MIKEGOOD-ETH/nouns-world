@@ -28,9 +28,23 @@ function toggleMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll("a");
+    // Select all links on the page
+    const allLinks = document.querySelectorAll("a");
 
-    links.forEach(link => {
-        link.setAttribute("target", "_blank");
+    // Loop through each link
+    allLinks.forEach(link => {
+        // Check if the link is within the specified sections
+        if (
+            !link.closest(".explore-more") &&
+            !link.closest(".nav-link") &&
+            !link.closest(".image-grid")
+        ) {
+            // If not, set it to open in a new window
+            link.setAttribute("target", "_blank");
+        } else {
+            // Otherwise, ensure it opens in the same window/tab
+            link.setAttribute("target", "_self");
+        }
     });
 });
+
